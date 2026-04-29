@@ -3,8 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <title>Hola Mundos</title>
+    <style>
+        /* ── Reset & base ── */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #0f1117;
+            background-image: radial-gradient(ellipse at 50% 0%, #1e2a45 0%, #0f1117 70%);
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            color: #e8eaf0;
+        }
+
+        /* ── Card ── */
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 56px 64px;
+            text-align: center;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+        }
+
+        /* ── Título ── */
+        h1 {
+            font-size: 2.6rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, #ffffff 0%, #a0aec0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        p.subtitulo {
+            font-size: 1rem;
+            color: #718096;
+            margin-bottom: 36px;
+        }
+
+        /* ── Botón azul ── */
+        .boton-azul {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 14px 36px;
+            border: none;
+
+            border-radius: 12px;
+            cursor: pointer;
+            letter-spacing: 0.3px;
+            box-shadow: 0 4px 24px rgba(59, 130, 246, 0.45);
+            transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+        }
+
+        .boton-azul:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(59, 130, 246, 0.65);
+            opacity: 0.95;
+        }
+
+        .boton-azul:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 12px rgba(59, 130, 246, 0.4);
+        }
+    </style>
 </head>
 <body>
-    <h1>Hola Mundosss</h1>
+
+
+    <div class="card">
+        <h1>Hola Mundo</h1>
+        <p class="subtitulo">Bienvenido a esta página rediseñada con CSS</p>
+        <button class="boton-azul">¡Haz clic aquí!</button>
+    </div>
 </body>
 </html>
